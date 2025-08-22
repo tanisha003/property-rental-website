@@ -12,23 +12,24 @@ import { MdOutlinePool } from "react-icons/md";
 import { MdOutlineCabin } from "react-icons/md";
 import { GiShop } from "react-icons/gi";
 import { MdApartment } from "react-icons/md";
+import { Link, NavLink } from 'react-router-dom';
 function Nav() {
     let [visible,setvisible]=useState(false)
   return (
     
     <div id='Nav'>
     {visible? <div className='hamburger'>
-        <div className='ham1'>Login</div>
-        <div className='ham1'>Signup</div>
+        <Link to={"/Login"}><div className='ham1'>Login</div></Link>
+        <Link to={"/Signup"}><div className='ham1'>Signup</div></Link>
         <div className='ham1'>List Your Home</div>
         <div className='ham1'>Help Center</div>
     </div>:
     <div></div>}
       <div className='nav1'>
-        <div className='logo'>
+        <Link to={""}><div className='logo'>
             <img src={logo} alt=''width="50px"/>
             <h1>PrimeStay</h1>
-        </div>
+        </div></Link>
         <div className='search'>
             <input type='text' placeholder='Search Destination'/>
             <button><span>Search</span> <CiSearch /></button>
@@ -44,7 +45,7 @@ function Nav() {
         </div>
       </div>
       <div className='nav2'>
-        <div className='svg11'><FaFireAlt /><h3>Trending</h3></div>
+        <NavLink to={""}><div className='svg11'><FaFireAlt /><h3>Trending</h3></div></NavLink>
         <div className='svg11'><FaHouse /><h3>Houses</h3></div>
         <div className='svg11'><MdBedroomParent /><h3>Rooms</h3></div>
         <div className='svg11'><PiFarmFill /><h3>Farm Houses</h3></div>
