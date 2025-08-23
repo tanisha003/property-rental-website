@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import "./Home.css"
 import Card from '../Card/Card'
 import house from "../../assets/house.jpg"
@@ -37,8 +37,16 @@ import roomnew2 from "../../assets/roomnew2.avif"
 import hut1 from "../../assets/hut1.avif"
 import hut2 from "../../assets/hut2.avif"
 import hut3 from "../../assets/hut3.avif"
+import { dataContext } from '../../Context/UserContext'
 
 function Home() {
+   let { title,
+          addListing,
+          addImage1,
+          addImage2,
+          addImage3,
+          price,
+          }=useContext(dataContext)
   return (
     <div id='home'>
       <Card image1={house} image2={house1} image3={house2}
@@ -65,6 +73,7 @@ function Home() {
         title={"3BHK House in Kolkata"} price={"40,000"}/>
         <Card image1={hut3} image2={hut2} image3={hut1}
         title={"2BHK House in Kolkata"} price={"20,000"}/>
+        {addListing?<Card image1={URL.createObjectURL(addImage1)} image2={URL.createObjectURL(addImage2)} image3={URL.createObjectURL(addImage3)} title={title} price={price}/>:""}
 
     </div>
   )

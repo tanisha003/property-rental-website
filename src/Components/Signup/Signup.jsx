@@ -3,7 +3,10 @@ import "./Signup.css"
 import { MdOutlinePersonAddAlt } from "react-icons/md";
 function Signup() {
   return (
-    <div id='signup'>
+    <div id='signup'
+    onSubmit={(e)=>{
+        alert("Signup Successful")
+    }}>
        <form action="">
     <span id='signuptitle'>SignUp Page</span>
        <div className='list'>

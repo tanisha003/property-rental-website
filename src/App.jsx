@@ -6,11 +6,13 @@ import Login from './Components/Login/Login'
 import Signup from './Components/Signup/Signup'
 import { Outlet } from 'react-router-dom'
 import Listing from './Components/Listing/Listing'
+import Footer from './Components/Footer/Footer'
 function App() {
   return (
     <>
       <Nav/>
       <Outlet/>
+      <Footer/>
     </>
   )
 }
