@@ -5,6 +5,7 @@ import Home from './Components/Home/Home'
 import Login from './Components/Login/Login'
 import Signup from './Components/Signup/Signup'
 import { Outlet } from 'react-router-dom'
+import Listing from './Components/Listing/Listing'
 function App() {
   return (
     <>

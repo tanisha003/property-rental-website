@@ -24,6 +24,7 @@
     margin-bottom: 20px;
 }
 #signup .list{
+    width: 50%;
     display: flex;
     align-items: start;
     justify-content: center;
@@ -35,7 +36,7 @@
     color: black;
 }
 #signup .list input{
-    width: 90%;
+    width:90%;
     padding: 3px;
     box-sizing: border-box;
     outline: none;
@@ -56,4 +57,9 @@
     gap: 5px;
     border: none;
     margin-top: 40px;
+}
+#signupbtn svg{
+    width: 20px;
+    height: 20px;
+    color: white;
 }

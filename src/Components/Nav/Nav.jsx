@@ -21,7 +21,7 @@ function Nav() {
     {visible? <div className='hamburger'>
         <Link to={"/Login"}><div className='ham1'>Login</div></Link>
         <Link to={"/Signup"}><div className='ham1'>Signup</div></Link>
-        <div className='ham1'>List Your Home</div>
+        <Link to={"/Listing"}><div className='ham1'>List Your Home</div></Link>
         <div className='ham1'>Help Center</div>
     </div>:
     <div></div>}
@@ -35,7 +35,7 @@ function Nav() {
             <button><span>Search</span> <CiSearch /></button>
         </div>
         <div className='ham'>
-            <button id='btn1'>List Your Home</button>
+            <Link to={"/Listing"}><button id='btn1'>List Your Home</button></Link>
             <button id='btn2' onClick={()=>{
                 setvisible(prev=>!prev)
             }}>
@@ -46,7 +46,7 @@ function Nav() {
       </div>
       <div className='nav2'>
         <NavLink to={""}><div className='svg11'><FaFireAlt /><h3>Trending</h3></div></NavLink>
-        <div className='svg11'><FaHouse /><h3>Houses</h3></div>
+        <NavLink to={"/Houses"}><div className='svg11'><FaHouse /><h3>Houses</h3></div></NavLink>
         <div className='svg11'><MdBedroomParent /><h3>Rooms</h3></div>
         <div className='svg11'><PiFarmFill /><h3>Farm Houses</h3></div>
         <div className='svg11'><MdOutlinePool /><h3>Pool Houses </h3></div>
